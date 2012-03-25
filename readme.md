@@ -1,4 +1,5 @@
-﻿#ReadMe
+﻿ReadMe
+==============
 
 ##Introduction
 **OfflineMap-based-on-Osmdroid** is an library using for   establish off-line map on your android project. 
@@ -11,10 +12,12 @@ It's based on osmdroid-android-3.0.5 ( see <http://code.google.com/p/osmdroid>) 
 
 ###Step 1
 Download:
+
 * [osmdroid](http://code.google.com/p/osmdroid/)
 * [SLF4J](http://www.slf4j.org/)
 
 Test Environment
+
 * osmdroid-android 3.0.5
 * slf4j-android 1.5.8
 
@@ -25,9 +28,9 @@ Using [**Mobile Atlas Creator 1.8**]() download map data. (You can use lastest *
 
 Mobile Atlas Creator's Options:
 
-Map source: Google map, OpenStreetMap, etc..
-Zoom Levels: 19 to 0. 19 is the largest level.
-**※Atlas settings: you must choose "Big Planet Tracks SQLite". ** 
+* Map source: Google map, OpenStreetMap, etc..
+* Zoom Levels: 19 to 0. 19 is the largest level.
+* **※Atlas settings: you must choose "Big Planet Tracks SQLite". ** 
 
 After setting, click *Create atlas* button to start downloading. Map data will be put into *"./atlases"*.
 
@@ -43,28 +46,28 @@ Using OfflineMapView to build your off-line map
 
 Demo Code:
 
-		// init Layout
-		setContentView(R.layout.main);
-		this.mapLayout = (RelativeLayout) findViewById(R.id.mapLayout);
+	// init Layout
+	setContentView(R.layout.main);
+	this.mapLayout = (RelativeLayout) findViewById(R.id.mapLayout);
 
-		// init Offline Map
-		this.mapView = new OfflineMapView(this, "GoogleMapCH.sqlitedb");
-		this.mapController = mapView.getController();
+	// init Offline Map
+	this.mapView = new OfflineMapView(this, "GoogleMapCH.sqlitedb");
+	this.mapController = mapView.getController();
 
-		// set Zoom Countrol
-		this.mapView.setBuiltInZoomControls(true);
-		// set Touch Control
-		this.mapView.setMultiTouchControls(true);
-		// zoom to 15
-		this.mapController.setZoom(15);
-		//add mapview
-		this.mapLayout.addView(this.mapView, new RelativeLayout.LayoutParams(
+	// set Zoom Countrol
+	this.mapView.setBuiltInZoomControls(true);
+	// set Touch Control
+	this.mapView.setMultiTouchControls(true);
+	// zoom to 15
+	this.mapController.setZoom(15);
+	//add mapview
+	this.mapLayout.addView(this.mapView, new RelativeLayout.LayoutParams(
 				android.view.ViewGroup.LayoutParams.FILL_PARENT,
 				android.view.ViewGroup.LayoutParams.FILL_PARENT));
 
 		// scroll to 24082456, 120558472
-		GeoPoint geoPoint = new GeoPoint(24082456, 120558472);
-		this.mapController.setCenter(geoPoint);
+	GeoPoint geoPoint = new GeoPoint(24082456, 120558472);
+	this.mapController.setCenter(geoPoint);
 
 
 Layout:
