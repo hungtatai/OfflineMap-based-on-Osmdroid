@@ -5,7 +5,7 @@
 **OfflineMap-based-on-Osmdroid** is an library using for   establish off-line map on your android project. 
 You can easily build off-line map whatever you can get (like google map, osm map, etc.. ) on your project. 
 
-It's based on [osmdroid-android-3.0.5](http://code.google.com/p/osmdroid) , and use [slf4j]http://www.slf4j.org/) for debug.
+It's based on [osmdroid-android-3.0.5](http://code.google.com/p/osmdroid) , and use [slf4j](http://www.slf4j.org/) for debug.
 
 
 ##Install
@@ -34,8 +34,8 @@ Using [**Mobile Atlas Creator 1.8**]() download map data. (You can use lastest *
 Mobile Atlas Creator's Options:
 
 * Map source: Google map, OpenStreetMap, etc..
-* Zoom Levels: 19 to 0. 19 is the largest level.
-* **Atlas settings: you must choose "Big Planet Tracks SQLite".** 
+* Zoom Levels: 19 to 0. 19 is the highest level. Higher level have better details, but taking more space.
+* **Atlas settings: YOU MUST choose "Big Planet Tracks SQLite".** 
 
 
 
