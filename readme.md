@@ -16,21 +16,28 @@ Download:
 * [osmdroid](http://code.google.com/p/osmdroid/)
 * [SLF4J](http://www.slf4j.org/)
 
+
+
 Test Environment
 
 * osmdroid-android 3.0.5
 * slf4j-android 1.5.8
 
 
+
+
 ###Step 2
 
 Using [**Mobile Atlas Creator 1.8**]() download map data. (You can use lastest *Mobile Atlas Creator* certainly. but after 1.9.x version it *Doesn't support* google map.) 
+
 
 Mobile Atlas Creator's Options:
 
 * Map source: Google map, OpenStreetMap, etc..
 * Zoom Levels: 19 to 0. 19 is the largest level.
 * **※Atlas settings: you must choose "Big Planet Tracks SQLite". ** 
+
+
 
 After setting, click *Create atlas* button to start downloading. Map data will be put into *"./atlases"*.
 
@@ -39,9 +46,20 @@ Finally, move .sqlitedb to SD card.
 
 ###Step 3
 
+Import:
+
+	import idv.hondadai.offlinemap.views.OfflineMapView;
+
+	import org.osmdroid.util.GeoPoint;
+	import org.osmdroid.views.MapController;
+	import org.osmdroid.views.MapView;
+
+
+
+
 Using OfflineMapView to build your off-line map
 
-	mapView = new OfflineMapView(this, "Your Database File's path");
+	MapView mapView = new OfflineMapView(this, "Your Database File's path");
 
 
 Demo Code:
